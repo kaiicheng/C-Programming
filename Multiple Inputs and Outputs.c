@@ -5,7 +5,7 @@ int main(void)
   float f;
   double df;
   scanf("%d%f%lf", &i, &f, &df);
-  printf("%d %p %f %f\n", i, &i, f, df);  /*%p and &i => address */
+  printf("%d %p %f %f\n", i, &i, f, df);
   return 0;
 }
  
