@@ -1,13 +1,19 @@
 #include <stdio.h>
-main()
+int gcd(int i, int j)
 {
-	int i, j, k;
-	scanf("%d", &i);
-	scanf("%d", &j);
-	while (i % j != 0) {
-		k = i % j;
-		i = j;
-		j = k;
-	}
-	printf("%d\n", j);
+  printf("gcd(%d, %d) = ", i, j);
+  int k = i % j;
+  if (k == 0)
+    return(j);
+  return(gcd(j, k));
 }
+ 
+int main(void)
+{
+  int i, j;
+  scanf("%d", &i);
+  scanf("%d", &j);
+  printf("gcd(%d, %d) = %d\n", i, j, gcd(i, j));
+  return 0;
+}
+ 
